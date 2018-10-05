@@ -16,6 +16,9 @@ var guessesLeft = 10;
 //Determines which key was pressed.Capture the key pressed by user, store in userGuess variable.
     var userGuess = event.key;
 
+//This will store and display the user's choice of letters. It will push it into guessesSoFar.
+    guessesSoFar.push (userGuess);
+
 //Create an array with possible letters to choose from//
     var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 
@@ -41,6 +44,10 @@ var guessesLeft = 10;
 
 document.getElementById('wins').innerHTML = "Wins: " + wins;
 document.getElementById('losses').innerHTML = "Losses: " + losses;
-document.getElementById('guessesLeft').innerHTML = "Guesses left: " + guesses;
+document.getElementById('guessesLeft').innerHTML = "Guesses left: " + guessesLeft;
+document.getElementById('guessesSoFar').innerHTML = "Your guesses so far: " + guessesSoFar;
 
     }
+
+//This is when the computer makes a choice of letter and keeps it until it resets//
+
