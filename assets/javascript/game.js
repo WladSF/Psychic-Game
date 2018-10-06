@@ -11,43 +11,57 @@ var guessesSoFar = [];
 var guessesLeft = 10;
 
 //When the user presses a key, it will run the following function://
-    document.onkeyup = function (event) {
+document.onkeyup = function (event) {
 
-//Determines which key was pressed.Capture the key pressed by user, store in userGuess variable.
+    //Determines which key was pressed.Capture the key pressed by user, store in userGuess variable.
     var userGuess = event.key;
 
-//This will store and display the user's choice of letters. It will push it into guessesSoFar.
-    guessesSoFar.push (userGuess);
+    //This will store and display the user's choice of letters. It will push it into guessesSoFar.
+    guessesSoFar.push(userGuess);
 
-//Create an array with possible letters to choose from//
-    var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    //Create an array with possible letters to choose from//
+    var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
-//Choosing a random letter from the options array. This is the compiuter's guess. 
-    var computerChoice = alphabet[Math.floor(Math.random () * alphabet.length)];
-
-//If user guesses correctly, wins go up 1 point//
-    if(userGuess === computerChoice){
+    //Choosing a random letter from the options array. This is the compiuter's guess. 
+    var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
+    console.log(computerChoice);
+    //If user guesses correctly, wins go up 1 point//
+    if (userGuess === computerChoice) {
         wins++;
+        gameReset();
     }
-    
+    //If user chooses wrong letter, guessesLeft should go down, and then we should add the key guessed to guessesSoFar an d now e need to check if guessesleft === 0. Then we need increment the # of losses and reset the game. 
     else {
         guessesLeft--;
     }
 
-    if(guessesLeft = 0){
-        losses++
+    if (guessesLeft === 0) {
+        losses++;
+        gameReset();
     }
 
-//Console output to confirm if correct//
+    //Console output to confirm if correct//
     console.log(computerChoice);
-  
 
-document.getElementById('wins').innerHTML = "Wins: " + wins;
-document.getElementById('losses').innerHTML = "Losses: " + losses;
-document.getElementById('guessesLeft').innerHTML = "Guesses left: " + guessesLeft;
-document.getElementById('guessesSoFar').innerHTML = "Your guesses so far: " + guessesSoFar;
 
-    }
+    document.getElementById('wins').innerHTML = "Wins: " + wins;
+    document.getElementById('losses').innerHTML = "Losses: " + losses;
+    document.getElementById('guessesLeft').innerHTML = "Guesses left: " + guessesLeft;
+    document.getElementById('guessesSoFar').innerHTML = "Your guesses so far: " + guessesSoFar;
 
-//This is when the computer makes a choice of letter and keeps it until it resets//
+}
+
+var gameReset = function () {
+    guessesSoFar = [];
+    guessesLeft = 10;
+
+}
+    
+
+
+
+
+
+
+//This is when the computer makes a choice of letter and keeps it until it resets// 
 
