@@ -9,6 +9,7 @@ var wins = 0;
 var losses = 0;
 var guessesSoFar = [];
 var guessesLeft = 10;
+var res = guessesSoFar.toUpperCase;
 
 //When the user presses a key, it will run the following function://
 document.onkeyup = function (event) {
@@ -18,6 +19,7 @@ document.onkeyup = function (event) {
 
     //This will store and display the user's choice of letters. It will push it into guessesSoFar array.//
     guessesSoFar.push(userGuess);
+    
 
     //Create an array with possible letters to choose from.//
     var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
@@ -47,7 +49,7 @@ document.onkeyup = function (event) {
     document.getElementById('guessesSoFar').innerHTML = "Your guesses so far: " + guessesSoFar;
 }
 
-//This is the fiunction to tell the two variables below to reset.//
+//This is the function to tell the two variables below to reset.//
 var gameReset = function () {
     guessesSoFar = [];
     guessesLeft = 10;
