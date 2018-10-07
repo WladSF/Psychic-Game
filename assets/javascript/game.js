@@ -9,7 +9,6 @@ var wins = 0;
 var losses = 0;
 var guessesSoFar = [];
 var guessesLeft = 10;
-var res = guessesSoFar.toUpperCase;
 
 //When the user presses a key, it will run the following function://
 document.onkeyup = function (event) {
