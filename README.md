@@ -1,6 +1,4 @@
-# Psychic-Game hola
-
-<!-- 
+# Psychic-Game 
 Instructions:
 HJow does this game work?
     1. The computer randomly chooses a letter from the alphabet.
@@ -26,5 +24,3 @@ Variables needed:
     3. wins - user guesses the letter correctly
     4. losses - user runs out of guesses
     5. guessesSoFar - current guesses for using during this round
-*/
- -->
