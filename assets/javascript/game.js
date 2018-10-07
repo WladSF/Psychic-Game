@@ -19,7 +19,6 @@ document.onkeyup = function (event) {
     //This will store and display the user's choice of letters. It will push it into guessesSoFar array.//
     guessesSoFar.push(userGuess);
     
-
     //Create an array with possible letters to choose from.//
     var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
