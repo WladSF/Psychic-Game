@@ -53,3 +53,13 @@ var gameReset = function () {
     guessesLeft = 10;
 }
 
+function writeStats () {
+    console.log(wins);
+    console.log(losses);
+    console.log(guessesSoFar);
+    console.log(guessesLeft);
+    console.log(computerChoice);
+    console.log(userGuess);
+}
+
+writeStats ();
