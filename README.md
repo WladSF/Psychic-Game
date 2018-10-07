@@ -1,6 +1,7 @@
 # Psychic-Game 
+
 Instructions:
-HJow does this game work?
+How does this game work?
     1. The computer randomly chooses a letter from the alphabet.
     2. The user chooses a letter from the alphabet, trying to match the computer's choice. 
     3. Computer is alerted that a key has been pressed by the user: document.onkeyup = function () {}
