@@ -1,6 +1,6 @@
 # Psychic-Game 
 
-<!--
+
 ##Instructions:
 ###How does this game work?
     1. The computer randomly chooses a letter from the alphabet.
@@ -25,4 +25,4 @@
     2. userGuess - storing the user's letter guess
     3. wins - user guesses the letter correctly
     4. losses - user runs out of guesses
-    5. guessesSoFar - current guesses for using during this round -->
+    5. guessesSoFar - current guesses for using during this round
