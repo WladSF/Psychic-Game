@@ -14,7 +14,7 @@ var guessesLeft = 10;
 document.onkeyup = function (event) {
 
     //Determines which key was pressed.Capture the key pressed by user, stores it in userGuess variable.//
-    var userGuess = event.key;
+    var userGuess = event.key.toUpperCase();
 
     //This will store and display the user's choice of letters. It will push it into guessesSoFar array.//
     guessesSoFar.push(userGuess);
@@ -53,3 +53,13 @@ var gameReset = function () {
     guessesLeft = 10;
 }
 
+function writeStats () {
+    console.log(wins);
+    console.log(losses);
+    console.log(guessesSoFar);
+    console.log(guessesLeft);
+    console.log(computerChoice);
+    console.log(userGuess);
+}
+
+writeStats ();
