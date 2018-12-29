@@ -7,28 +7,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Link to favicon -->
-    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
-    <link rel="shortcut icon" type="image/ico" href="https://cdn.shopify.com/s/files/1/0002/6715/7514/products/glass6_1024x1024@2x.png?v=1526473162">
+    <!-- <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <link rel="shortcut icon" type="image/ico" href="https://cdn.shopify.com/s/files/1/0002/6715/7514/products/glass6_1024x1024@2x.png?v=1526473162"> -->
+
+    <!-- Link to Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
 
     <!-- Link to the stylesheet -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- Link to the JS script -->
     <script src="assets/javascript/game.js"></script>
 
     <title>Psychic game</title>
 </head>
 
 <body>
-    <h1>The Psychic Game</h1>
-    <h2>Guess what letter I'm thinking of !</h2>
-    <ul>
-        <li id="wins"><b>Wins:</b></li>
+    <div class="background">
         <br>
-        <li id="losses"><b>Losses:</b> </li>
-        <br>
-        <li id="guessesLeft"><b>Guesses left:</li>
-        <br>
-        <li id="guessesSoFar"><b>Your guesses so far:</b></li>
-    </ul>
+        <h1>The Psychic Game</h1>
+        <h2>Type in any letter and try to match with the secret one !</h2>
+        <section>
+            <ul class="background2">
+                <li id="guessesSoFar"><b>Your guesses so far:</b></li>
+                <br>
+                <li id="guessesLeft"><b>Guesses left:</b></li>
+                <br>
+                <li id="wins"><b>Wins:</b></li>
+                <br>
+                <li id="losses"><b>Losses:</b></li>
+                <br>
+            <button onClick="hardReset()">RESET</button>
+        </ul>
+        </section>
+    </div>
 </body>
 
 </html>
