@@ -35,7 +35,6 @@ document.onkeyup = function (event) {
         if (guessesLeft === 0) {                    //If guessesLeft go down to zero, losses go up 1 point, and the game is reset.//
             alert("Game over, you lost!");
             losses++;
-            boo.play();
             gameReset();
         }
     };
